@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 from . import mobile_app_inventory
 
