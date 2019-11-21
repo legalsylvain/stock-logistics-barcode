@@ -7,6 +7,7 @@ from odoo import fields, models
 
 class StockInventoryUnknownLine(models.Model):
     _name = 'stock.inventory.unknown.line'
+    _description = 'Inventory Unknown Line'
 
     inventory_id = fields.Many2one(
         comodel_name='stock.inventory', required=True, ondelete='cascade',
