@@ -14,16 +14,14 @@
     ],
     'data': [
         'security/ir.model.access.csv',
-        'views/view_stock_inventory.xml',
-        'views/view_stock_location.xml',
-        'views/view_res_company.xml',
+        # 'views/view_stock_inventory.xml',
+        # 'views/view_stock_location.xml',
+        # 'views/view_res_company.xml',
     ],
     'demo': [
-        'demo/res_users.xml',
         'demo/res_company.xml',
         'demo/stock_location.xml',
         'demo/stock_inventory.xml',
-        'demo/product_product.xml',
     ],
     'post_init_hook': 'set_mobile_available_on_stock_location',
 }
