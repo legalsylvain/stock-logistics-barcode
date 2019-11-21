@@ -49,7 +49,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
         ]"/>
     </record>
 
-    <record id="product.group_uom" model="res.groups">
+    <record id="uom.group_uom" model="res.groups">
         <field name="users" eval="[
             (4, ref('base.user_root')),
             (4, ref('base.user_demo')),

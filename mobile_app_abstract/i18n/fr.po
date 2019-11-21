@@ -17,21 +17,21 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: mobile_app_abstract
-#: model:ir.model.fields,field_description:mobile_app_abstract.field_mobile_app_mxin_display_name
+#: model:ir.model.fields,field_description:mobile_app_abstract.field_mobile_app_mixin_display_name
 msgid "Display Name"
 msgstr "Nom à afficher"
 
 #. module: mobile_app_abstract
-#: model:ir.model.fields,field_description:mobile_app_abstract.field_mobile_app_mxin_id
+#: model:ir.model.fields,field_description:mobile_app_abstract.field_mobile_app_mixin_id
 msgid "ID"
 msgstr "ID"
 
 #. module: mobile_app_abstract
-#: model:ir.model.fields,field_description:mobile_app_abstract.field_mobile_app_mxin___last_update
+#: model:ir.model.fields,field_description:mobile_app_abstract.field_mobile_app_mixin___last_update
 msgid "Last Modified on"
 msgstr "Dernière modification le"
 
 #. module: mobile_app_abstract
-#: model:ir.model,name:mobile_app_abstract.model_mobile_app_mxin
-msgid "mobile.app.mxin"
-msgstr "mobile.app.mxin"
+#: model:ir.model,name:mobile_app_abstract.model_mobile_app_mixin
+msgid "mobile.app.mixin"
+msgstr "mobile.app.mixin"
