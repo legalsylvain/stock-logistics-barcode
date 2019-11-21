@@ -8,15 +8,15 @@
     <ion-content class="has-header" data-ng-init="init()">
         <form ng-submit="submit()">
             <div class="list">
-                <label class="item item-input input-select" ng-show="data.db_list.length > 1">
+                <label class="item item-input input-select" ng-show="data.databases.length > 1">
                     <div class="form-label col-33" for="db">{{'Database' | translate}}</div>
-                    <select name="db" ng-options="value for value in data.db_list" ng-model="data.db" class="item-input select-required col-67"></select>
+                    <select name="db" ng-options="value for value in data.databases" ng-model="data.database" class="item-input select-required col-67"></select>
                 </label>
-                <label class="item item-input" ng-show="data.db_list.length">
+                <label class="item item-input" ng-show="data.databases.length">
                     <div class="form-label col-33">{{'Login' | translate}}</div>
                     <input type="text" ng-model="data.login" id="input_login" name="input_login" autocomplete="off" class="item-input input-required col-67"/>
                 </label>
-                <label class="item item-input" ng-show="data.db_list.length">
+                <label class="item item-input" ng-show="data.databases.length">
                     <div class="form-label col-33">{{'Password' | translate}}</div>
                     <input type="password" ng-model="data.password" id="input_password" name="input_password" class="item-input input-required col-67"/>
                 </label>
