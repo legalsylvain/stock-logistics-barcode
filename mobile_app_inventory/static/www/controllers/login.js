@@ -35,26 +35,37 @@ angular.module('mobile_app_inventory').controller(
     };
 
     $scope.submit = function () {
+        console.log("submit");
         jsonRpc.login(
             $scope.data.database,
             $scope.data.login,
             $scope.data.password
         ).then(function (user) {
+            console.log("then du login");
+            console.log(user);
             jsonRpc.call(
-                'mobile.app.picking',
+                'mobile.app.inventory',
                 'check_group',
                 ['stock.group_stock_user']
             ).then(function (res) {
+                console.log("fromage");
+                console.log(res);
                 if (res) {
                     $scope.errorMessage = '';
-                    $state.go('list_picking_type', {});
+                    $state.go('inventory', {});
                 } else {
                     $scope.errorMessage = $translate.instant(
                         'Insufficient Acces Right: you should be member of' +
                         " 'Warehouse / user' group.");
                 }
+            }, function (e) {
+                console.log("Error");
+                console.log(e);
+                $scope.errorMessage = $translate.instant('Une vieille erreur');
             });
         }, function (e) {
+            console.log("Error");
+            console.log(e);
             $scope.errorMessage = $translate.instant('Bad Login / Password');
         });
     };

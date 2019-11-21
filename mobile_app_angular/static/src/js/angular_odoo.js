@@ -20,7 +20,7 @@ angular.module('odoo').provider('jsonRpc', function jsonRpcProvider () {
 
     /**
         * login
-        *        update cookie (session_id) in both cases
+        *        update cookie (sc) in both cases
         * @return promise
         *        resolve promise if credentials ok
         *        reject promise if credentials ko (with {title: wrong_login})
@@ -43,6 +43,7 @@ angular.module('odoo').provider('jsonRpc', function jsonRpcProvider () {
           })
         }
         odooRpc.context = result.user_context
+        console.log(result);
         cookies.set_sessionId(result.session_id)
         return result
       })
@@ -131,7 +132,6 @@ angular.module('odoo').provider('jsonRpc', function jsonRpcProvider () {
     odooRpc.sendRequest = function (url, params) {
       /** (internal) build request for $http
             * keep track of uniq_id_counter
-            * add session_id in the request (for Odoo v7 only)
             */
       function buildRequest (url, params) {
         odooRpc.uniq_id_counter += 1
@@ -258,16 +258,16 @@ angular.module('odoo').provider('jsonRpc', function jsonRpcProvider () {
     return {
       delete_sessionId: function () {
         sessionId = null
-        document.cookie = 'session_id=; expires=Thu, 01 Jan 1970 00:00:00 GMT'
+        document.cookie = 'sc=; expires=Thu, 01 Jan 1970 00:00:00 GMT'
       },
       get_sessionId: function () {
         return document.cookie.split('; ')
-          .filter(function (x) { return x.indexOf('session_id') === 0 })
+          .filter(function (x) { return x.indexOf('sc') === 0 })
           .map(function (x) { return x.split('=')[1] })
           .pop() || sessionId || ''
       },
       set_sessionId: function (val) {
-        document.cookie = 'session_id=' + val
+        document.cookie = 'sc=' + val
         sessionId = val
       }
     }
