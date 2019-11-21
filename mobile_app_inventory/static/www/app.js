@@ -78,7 +78,7 @@ angular.module(
 
     $ionicConfigProvider.views.transition('none');
 
-    $urlRouterProvider.otherwise('/inventory/');
+    $urlRouterProvider.otherwise('/login');
 
     $translateProvider.useStaticFilesLoader({
             prefix: 'i18n/',
