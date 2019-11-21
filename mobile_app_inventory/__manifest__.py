@@ -5,7 +5,7 @@
 
 {
     'name': 'Inventory Mobile App',
-    'version': '8.0.2.0.0',
+    'version': '12.0.2.0.0',
     'category': 'Stock',
     'author': 'GRAP,Akretion,Odoo Community Association (OCA)',
     'website': 'https://www.odoo-community.org',
