@@ -135,6 +135,7 @@ angular.module('odoo').provider('jsonRpc', function jsonRpcProvider () {
             */
       function buildRequest (url, params) {
         odooRpc.uniq_id_counter += 1
+        params.session_id = cookies.get_sessionId();
 
         var jsonData = {
           jsonrpc: '2.0',
